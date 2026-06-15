@@ -243,7 +243,7 @@
         localStorage.setItem('token', data.data.token);
         localStorage.setItem('username', data.data.username || username);
         localStorage.setItem('role', data.data.role || '');
-        window.location.href = 'dashboard.html';
+        window.location.href = 'users.html';
       } else {
         errorMsg.textContent = data.message || '帳號或密碼錯誤，請重新輸入。';
         errorMsg.classList.remove('d-none');
