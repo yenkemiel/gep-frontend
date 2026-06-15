@@ -7,134 +7,51 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     html, body { height: 100%; font-family: 'Helvetica Neue', Arial, 'PingFang TC', 'Microsoft JhengHei', sans-serif; }
-
-    .sidebar {
-      width: 220px; min-height: 100vh; background: #2B4336;
-      flex-shrink: 0; display: flex; flex-direction: column;
-    }
-    .sidebar-brand {
-      padding: 1.5rem 1.25rem 1rem; font-size: 0.75rem; font-weight: 600;
-      letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.4);
-      border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 0.5rem;
-    }
+    .sidebar { width: 220px; min-height: 100vh; background: #2B4336; flex-shrink: 0; display: flex; flex-direction: column; }
+    .sidebar-brand { padding: 1.5rem 1.25rem 1rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.4); border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 0.5rem; }
     .sidebar-brand strong { display: block; font-size: 1rem; color: #fff; letter-spacing: -0.01em; margin-bottom: 0.2rem; }
-    .nav-link-item {
-      display: block; padding: 0.65rem 1.25rem; font-size: 0.9rem;
-      color: rgba(255,255,255,0.6); text-decoration: none; transition: all 0.15s;
-    }
+    .nav-link-item { display: block; padding: 0.65rem 1.25rem; font-size: 0.9rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: all 0.15s; }
     .nav-link-item:hover { color: #fff; background: rgba(255,255,255,0.07); }
     .nav-link-item.active { color: #fff; background: rgba(255,255,255,0.12); font-weight: 600; }
-    .nav-section-label {
-      padding: 1rem 1.25rem 0.35rem; font-size: 0.7rem; font-weight: 600;
-      letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3);
-    }
-
-    .topbar {
-      height: 56px; background: #fff; border-bottom: 1px solid #e8ede8;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 1.75rem; flex-shrink: 0;
-    }
+    .nav-section-label { padding: 1rem 1.25rem 0.35rem; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+    .topbar { height: 56px; background: #fff; border-bottom: 1px solid #e8ede8; display: flex; align-items: center; justify-content: space-between; padding: 0 1.75rem; flex-shrink: 0; }
     .topbar-title { font-size: 1rem; font-weight: 600; color: #1a2e24; }
-    .role-badge {
-      font-size: 0.75rem; font-weight: 600; padding: 0.3rem 0.75rem;
-      border-radius: 4px; background: #eef3ec; color: #2B4336; letter-spacing: 0.04em;
-    }
-
+    .role-badge { font-size: 0.75rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 4px; background: #eef3ec; color: #2B4336; letter-spacing: 0.04em; }
     .main-content { background: #f5f6f4; flex: 1; overflow-y: auto; }
     .page-header { padding: 1.75rem 1.75rem 0; }
     .page-title { font-size: 1.4rem; font-weight: 700; color: #1a2e24; letter-spacing: -0.01em; }
     .page-subtitle { font-size: 0.875rem; color: #7a8f7a; margin-top: 0.2rem; }
-
-    .content-card {
-      background: #fff; border-radius: 8px; border: 1px solid #e8ede8;
-      margin: 1.25rem 1.75rem;
-    }
-    .content-card-header {
-      padding: 1.1rem 1.5rem; border-bottom: 1px solid #e8ede8;
-      display: flex; align-items: center; justify-content: space-between;
-    }
+    .content-card { background: #fff; border-radius: 8px; border: 1px solid #e8ede8; margin: 1.25rem 1.75rem; }
+    .content-card-header { padding: 1.1rem 1.5rem; border-bottom: 1px solid #e8ede8; display: flex; align-items: center; justify-content: space-between; }
     .content-card-header h6 { font-size: 0.9rem; font-weight: 600; color: #1a2e24; margin: 0; }
-
-    .table th {
-      font-size: 0.78rem; font-weight: 600; text-transform: uppercase;
-      letter-spacing: 0.05em; color: #7a8f7a; border-bottom: 1px solid #e8ede8;
-      padding: 0.85rem 1rem; background: #fafbfa;
-    }
-    .table td {
-      font-size: 0.9rem; color: #2d3e2d; padding: 0.85rem 1rem;
-      vertical-align: middle; border-bottom: 1px solid #f0f4f0;
-    }
+    .table th { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #7a8f7a; border-bottom: 1px solid #e8ede8; padding: 0.85rem 1rem; background: #fafbfa; }
+    .table td { font-size: 0.9rem; color: #2d3e2d; padding: 0.85rem 1rem; vertical-align: middle; border-bottom: 1px solid #f0f4f0; }
     .table tbody tr.device-row:hover { background: #fafbfa; cursor: pointer; }
     .table tbody tr:last-child td { border-bottom: none; }
-
-    /* 月發電紀錄展開區 */
-    .record-panel {
-      background: #f8faf8;
-      border-top: 2px solid #2B4336;
-      padding: 1.25rem 1.5rem;
-    }
-    .record-panel-title {
-      font-size: 0.85rem; font-weight: 700; color: #2B4336;
-      text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1rem;
-    }
-    .record-table th {
-      font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
-      letter-spacing: 0.05em; color: #7a8f7a; padding: 0.65rem 0.85rem;
-      background: #f0f4f0; border-bottom: 1px solid #e0e8e0;
-    }
-    .record-table td {
-      font-size: 0.875rem; padding: 0.65rem 0.85rem;
-      border-bottom: 1px solid #eaf0ea; vertical-align: middle;
-    }
-
-    .btn-primary-green {
-      background: #2B4336; border: none; color: #fff;
-      font-size: 0.875rem; font-weight: 600; padding: 0.5rem 1rem;
-      border-radius: 6px; transition: background 0.15s;
-    }
+    .record-panel { background: #f8faf8; border-top: 2px solid #2B4336; padding: 1.25rem 1.5rem; }
+    .record-panel-title { font-size: 0.85rem; font-weight: 700; color: #2B4336; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 1rem; }
+    .record-table th { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #7a8f7a; padding: 0.65rem 0.85rem; background: #f0f4f0; border-bottom: 1px solid #e0e8e0; }
+    .record-table td { font-size: 0.875rem; padding: 0.65rem 0.85rem; border-bottom: 1px solid #eaf0ea; vertical-align: middle; }
+    .btn-primary-green { background: #2B4336; border: none; color: #fff; font-size: 0.875rem; font-weight: 600; padding: 0.5rem 1rem; border-radius: 6px; transition: background 0.15s; }
     .btn-primary-green:hover { background: #1a3028; color: #fff; }
     .btn-sm-action { font-size: 0.78rem; padding: 0.3rem 0.65rem; border-radius: 4px; }
-
     .modal-header { border-bottom: 1px solid #e8ede8; padding: 1.1rem 1.5rem; }
     .modal-title { font-size: 1rem; font-weight: 600; color: #1a2e24; }
     .modal-footer { border-top: 1px solid #e8ede8; padding: 0.9rem 1.5rem; }
-    .form-label {
-      font-size: 0.8rem; font-weight: 600; color: #445c41;
-      text-transform: uppercase; letter-spacing: 0.04em;
-    }
-    .form-control, .form-select {
-      font-size: 0.9rem; border: 1.5px solid #d6dcd0; border-radius: 6px;
-    }
-    .form-control:focus, .form-select:focus {
-      border-color: #2B4336; box-shadow: 0 0 0 3px rgba(43,67,54,0.1);
-    }
-
+    .form-label { font-size: 0.8rem; font-weight: 600; color: #445c41; text-transform: uppercase; letter-spacing: 0.04em; }
+    .form-control, .form-select { font-size: 0.9rem; border: 1.5px solid #d6dcd0; border-radius: 6px; }
+    .form-control:focus, .form-select:focus { border-color: #2B4336; box-shadow: 0 0 0 3px rgba(43,67,54,0.1); }
     .expand-icon { font-size: 0.7rem; color: #7a8f7a; transition: transform 0.2s; }
     .expand-icon.open { transform: rotate(90deg); }
   </style>
 </head>
 <body>
-
 <div class="d-flex" style="min-height:100vh;">
-
-  <!-- Sidebar -->
   <div class="sidebar">
-    <div class="sidebar-brand">
-      <strong>綠電管理平台</strong>
-      Green Energy Platform
-    </div>
-    <div class="nav-section-label">系統管理</div>
-    <a href="users.html" class="nav-link-item">使用者管理</a>
-    <div class="nav-section-label">業務管理</div>
-    <a href="targets.html" class="nav-link-item">年度目標</a>
-    <a href="solar-devices.html" class="nav-link-item active">太陽能設備</a>
-    <a href="contracts.html" class="nav-link-item">合約管理</a>
+    <div class="sidebar-brand"><strong>綠電管理平台</strong>Green Energy Platform</div>
+    <div id="sidebarNav"></div>
   </div>
-
-  <!-- 右側主區 -->
   <div class="d-flex flex-column flex-grow-1">
-
-    <!-- Topbar -->
     <div class="topbar">
       <div class="topbar-title">太陽能設備管理</div>
       <div class="d-flex align-items-center gap-3">
@@ -143,14 +60,11 @@
         <button class="btn btn-sm btn-outline-secondary" style="font-size:0.8rem;" onclick="doLogout()">登出</button>
       </div>
     </div>
-
-    <!-- Main -->
     <div class="main-content">
       <div class="page-header">
         <div class="page-title">太陽能設備管理</div>
         <div class="page-subtitle">設備建檔與月發電紀錄追蹤，點擊列表列展開紀錄</div>
       </div>
-
       <div class="content-card">
         <div class="content-card-header">
           <h6>設備清單</h6>
@@ -161,30 +75,16 @@
               <option value="INACTIVE">INACTIVE</option>
               <option value="MAINTENANCE">MAINTENANCE</option>
             </select>
-            <button class="btn btn-primary-green btn-sm" onclick="openCreateDeviceModal()">+ 新增設備</button>
+            <!-- 新增設備、修改狀態、月紀錄操作只有 EMPLOYEE -->
+            <button class="btn btn-primary-green btn-sm d-none" id="btnCreate" onclick="openCreateDeviceModal()">+ 新增設備</button>
           </div>
         </div>
-
         <div class="table-responsive">
           <table class="table mb-0">
-            <thead>
-              <tr>
-                <th style="width:32px;"></th>
-                <th>ID</th>
-                <th>設備名稱</th>
-                <th>裝置容量 (kW)</th>
-                <th>安裝日期</th>
-                <th>地點</th>
-                <th>狀態</th>
-                <th>操作</th>
-              </tr>
-            </thead>
-            <tbody id="deviceTableBody">
-              <tr><td colspan="8" class="text-center py-4 text-secondary">載入中...</td></tr>
-            </tbody>
+            <thead><tr><th style="width:32px;"></th><th>ID</th><th>設備名稱</th><th>裝置容量 (kW)</th><th>安裝日期</th><th>地點</th><th>狀態</th><th>操作</th></tr></thead>
+            <tbody id="deviceTableBody"><tr><td colspan="8" class="text-center py-4 text-secondary">載入中...</td></tr></tbody>
           </table>
         </div>
-
         <div class="d-flex align-items-center justify-content-between px-3 py-2 border-top" style="border-color:#e8ede8 !important;">
           <span class="text-secondary" style="font-size:0.8rem;" id="pageInfo"></span>
           <div class="d-flex gap-1">
@@ -197,165 +97,94 @@
   </div>
 </div>
 
-<!-- 新增設備 Modal -->
+<!-- 新增設備 Modal（EMPLOYEE） -->
 <div class="modal fade" id="createDeviceModal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">新增太陽能設備</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header"><h5 class="modal-title">新增太陽能設備</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+    <div class="modal-body">
+      <div class="row g-3">
+        <div class="col-12"><label class="form-label">設備名稱</label><input type="text" class="form-control" id="cd_deviceName" placeholder="輸入設備名稱"></div>
+        <div class="col-6"><label class="form-label">裝置容量 (kW)</label><input type="number" class="form-control" id="cd_capacityKw" placeholder="0.00"></div>
+        <div class="col-6"><label class="form-label">安裝日期</label><input type="date" class="form-control" id="cd_installDate"></div>
+        <div class="col-12"><label class="form-label">地點</label><input type="text" class="form-control" id="cd_location" placeholder="輸入設備地點"></div>
       </div>
-      <div class="modal-body">
-        <div class="row g-3">
-          <div class="col-12">
-            <label class="form-label">設備名稱</label>
-            <input type="text" class="form-control" id="cd_deviceName" placeholder="輸入設備名稱">
-          </div>
-          <div class="col-6">
-            <label class="form-label">裝置容量 (kW)</label>
-            <input type="number" class="form-control" id="cd_capacityKw" placeholder="0.00">
-          </div>
-          <div class="col-6">
-            <label class="form-label">安裝日期</label>
-            <input type="date" class="form-control" id="cd_installDate">
-          </div>
-          <div class="col-12">
-            <label class="form-label">地點</label>
-            <input type="text" class="form-control" id="cd_location" placeholder="輸入設備地點">
-          </div>
-        </div>
-        <div class="alert alert-danger d-none mt-3 py-2" id="createDeviceError" style="font-size:0.85rem;"></div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">取消</button>
-        <button class="btn btn-primary-green btn-sm" onclick="submitCreateDevice()">建立</button>
-      </div>
+      <div class="alert alert-danger d-none mt-3 py-2" id="createDeviceError" style="font-size:0.85rem;"></div>
     </div>
-  </div>
+    <div class="modal-footer"><button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">取消</button><button class="btn btn-primary-green btn-sm" onclick="submitCreateDevice()">建立</button></div>
+  </div></div>
 </div>
 
-<!-- 修改設備狀態 Modal -->
+<!-- 修改狀態 Modal（EMPLOYEE） -->
 <div class="modal fade" id="statusModal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">修改設備狀態</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-      </div>
-      <div class="modal-body">
-        <input type="hidden" id="s_id">
-        <div class="mb-3">
-          <label class="form-label">設備狀態</label>
-          <select class="form-select" id="s_status">
-            <option value="ACTIVE">ACTIVE</option>
-            <option value="INACTIVE">INACTIVE</option>
-            <option value="MAINTENANCE">MAINTENANCE</option>
-          </select>
-        </div>
-        <div class="alert alert-danger d-none py-2" id="statusError" style="font-size:0.85rem;"></div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">取消</button>
-        <button class="btn btn-primary-green btn-sm" onclick="submitStatus()">儲存</button>
-      </div>
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header"><h5 class="modal-title">修改設備狀態</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+    <div class="modal-body">
+      <input type="hidden" id="s_id">
+      <div class="mb-3"><label class="form-label">設備狀態</label><select class="form-select" id="s_status"><option value="ACTIVE">ACTIVE</option><option value="INACTIVE">INACTIVE</option><option value="MAINTENANCE">MAINTENANCE</option></select></div>
+      <div class="alert alert-danger d-none py-2" id="statusError" style="font-size:0.85rem;"></div>
     </div>
-  </div>
+    <div class="modal-footer"><button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">取消</button><button class="btn btn-primary-green btn-sm" onclick="submitStatus()">儲存</button></div>
+  </div></div>
 </div>
 
-<!-- 新增月發電紀錄 Modal -->
+<!-- 新增月發電紀錄 Modal（EMPLOYEE） -->
 <div class="modal fade" id="createRecordModal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">新增月發電紀錄</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header"><h5 class="modal-title">新增月發電紀錄</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+    <div class="modal-body">
+      <input type="hidden" id="cr_deviceId">
+      <div class="row g-3">
+        <div class="col-6"><label class="form-label">年份</label><input type="number" class="form-control" id="cr_year" placeholder="2025"></div>
+        <div class="col-6"><label class="form-label">月份</label><select class="form-select" id="cr_month"><option value="1">1 月</option><option value="2">2 月</option><option value="3">3 月</option><option value="4">4 月</option><option value="5">5 月</option><option value="6">6 月</option><option value="7">7 月</option><option value="8">8 月</option><option value="9">9 月</option><option value="10">10 月</option><option value="11">11 月</option><option value="12">12 月</option></select></div>
+        <div class="col-6"><label class="form-label">實際發電量 (kWh)</label><input type="number" class="form-control" id="cr_actualKwh" placeholder="0.00"></div>
+        <div class="col-6"><label class="form-label">資料來源</label><input type="text" class="form-control" id="cr_source" placeholder="MANUAL / METER"></div>
       </div>
-      <div class="modal-body">
-        <input type="hidden" id="cr_deviceId">
-        <div class="row g-3">
-          <div class="col-6">
-            <label class="form-label">年份</label>
-            <input type="number" class="form-control" id="cr_year" placeholder="2025">
-          </div>
-          <div class="col-6">
-            <label class="form-label">月份</label>
-            <select class="form-select" id="cr_month">
-              <option value="1">1 月</option><option value="2">2 月</option>
-              <option value="3">3 月</option><option value="4">4 月</option>
-              <option value="5">5 月</option><option value="6">6 月</option>
-              <option value="7">7 月</option><option value="8">8 月</option>
-              <option value="9">9 月</option><option value="10">10 月</option>
-              <option value="11">11 月</option><option value="12">12 月</option>
-            </select>
-          </div>
-          <div class="col-6">
-            <label class="form-label">實際發電量 (kWh)</label>
-            <input type="number" class="form-control" id="cr_actualKwh" placeholder="0.00">
-          </div>
-          <div class="col-6">
-            <label class="form-label">資料來源</label>
-            <input type="text" class="form-control" id="cr_source" placeholder="MANUAL / METER">
-          </div>
-        </div>
-        <div class="alert alert-danger d-none mt-3 py-2" id="createRecordError" style="font-size:0.85rem;"></div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">取消</button>
-        <button class="btn btn-primary-green btn-sm" onclick="submitCreateRecord()">新增</button>
-      </div>
+      <div class="alert alert-danger d-none mt-3 py-2" id="createRecordError" style="font-size:0.85rem;"></div>
     </div>
-  </div>
+    <div class="modal-footer"><button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">取消</button><button class="btn btn-primary-green btn-sm" onclick="submitCreateRecord()">新增</button></div>
+  </div></div>
 </div>
 
-<!-- 修改月發電紀錄 Modal -->
+<!-- 修改月發電紀錄 Modal（EMPLOYEE） -->
 <div class="modal fade" id="editRecordModal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">修改月發電紀錄</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+  <div class="modal-dialog"><div class="modal-content">
+    <div class="modal-header"><h5 class="modal-title">修改月發電紀錄</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+    <div class="modal-body">
+      <input type="hidden" id="er_deviceId"><input type="hidden" id="er_recordId">
+      <div class="row g-3">
+        <div class="col-12"><label class="form-label">實際發電量 (kWh)</label><input type="number" class="form-control" id="er_actualKwh"></div>
+        <div class="col-12"><label class="form-label">資料來源</label><input type="text" class="form-control" id="er_source"></div>
       </div>
-      <div class="modal-body">
-        <input type="hidden" id="er_deviceId">
-        <input type="hidden" id="er_recordId">
-        <div class="row g-3">
-          <div class="col-12">
-            <label class="form-label">實際發電量 (kWh)</label>
-            <input type="number" class="form-control" id="er_actualKwh">
-          </div>
-          <div class="col-12">
-            <label class="form-label">資料來源</label>
-            <input type="text" class="form-control" id="er_source">
-          </div>
-        </div>
-        <div class="alert alert-danger d-none mt-3 py-2" id="editRecordError" style="font-size:0.85rem;"></div>
-      </div>
-      <div class="modal-footer">
-        <button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">取消</button>
-        <button class="btn btn-primary-green btn-sm" onclick="submitEditRecord()">儲存</button>
-      </div>
+      <div class="alert alert-danger d-none mt-3 py-2" id="editRecordError" style="font-size:0.85rem;"></div>
     </div>
-  </div>
+    <div class="modal-footer"><button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">取消</button><button class="btn btn-primary-green btn-sm" onclick="submitEditRecord()">儲存</button></div>
+  </div></div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
   const API_BASE_URL = 'https://green-energy-platform-production.up.railway.app';
-  let currentPage = 0;
-  let totalPages = 0;
-  let expandedDeviceId = null;
+  let currentPage = 0, totalPages = 0, expandedDeviceId = null;
 
-  // 驗證登入
   const token = localStorage.getItem('token');
+  const role = localStorage.getItem('role');
   if (!token) window.location.href = 'login.html';
+  if (role !== 'MANAGER' && role !== 'EMPLOYEE') window.location.href = 'login.html';
 
   document.getElementById('usernameDisplay').textContent = localStorage.getItem('username') || '';
-  document.getElementById('roleDisplay').textContent = localStorage.getItem('role') || '';
+  document.getElementById('roleDisplay').textContent = role;
 
-  function authHeaders() {
-    return { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' };
-  }
+  document.getElementById('sidebarNav').innerHTML = `
+    <div class="nav-section-label">業務管理</div>
+    <a href="targets.html" class="nav-link-item">年度目標</a>
+    <a href="solar-devices.html" class="nav-link-item active">太陽能設備</a>
+    <a href="contracts.html" class="nav-link-item">合約管理</a>
+  `;
 
+  // 新增設備按鈕只有 EMPLOYEE
+  if (role === 'EMPLOYEE') document.getElementById('btnCreate').classList.remove('d-none');
+
+  function authHeaders() { return { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' }; }
   function doLogout() { localStorage.clear(); window.location.href = 'login.html'; }
 
   function statusBadge(status) {
@@ -367,22 +196,20 @@
     const status = document.getElementById('statusFilter').value;
     let url = `${API_BASE_URL}/api/v1/solar-devices?page=${currentPage}&size=10`;
     if (status) url += `&status=${status}`;
-
     try {
       const res = await fetch(url, { headers: authHeaders() });
       const data = await res.json();
       if (!res.ok) { showTableError(data.message || '載入失敗'); return; }
-
       const result = data.data;
       const devices = result.content || [];
       totalPages = result.totalPages || 0;
-
       const tbody = document.getElementById('deviceTableBody');
       if (devices.length === 0) {
         tbody.innerHTML = `<tr><td colspan="8" class="text-center py-4 text-secondary">目前沒有設備資料</td></tr>`;
       } else {
+        // 狀態修改按鈕只有 EMPLOYEE 看得到
         tbody.innerHTML = devices.map(d => `
-          <tr class="device-row" onclick="toggleRecords(${d.id}, this)" data-device-id="${d.id}">
+          <tr class="device-row" onclick="toggleRecords(${d.id})" data-device-id="${d.id}">
             <td><span class="expand-icon" id="icon-${d.id}">▶</span></td>
             <td class="text-secondary">#${d.id}</td>
             <td><strong>${d.deviceName}</strong></td>
@@ -391,141 +218,82 @@
             <td>${d.location || '-'}</td>
             <td>${statusBadge(d.status)}</td>
             <td onclick="event.stopPropagation()">
-              <button class="btn btn-outline-secondary btn-sm btn-sm-action"
-                onclick="openStatusModal(${d.id}, '${d.status}')">狀態</button>
+              ${role === 'EMPLOYEE' ? `<button class="btn btn-outline-secondary btn-sm btn-sm-action" onclick="openStatusModal(${d.id}, '${d.status}')">狀態</button>` : '—'}
             </td>
           </tr>
           <tr id="records-row-${d.id}" style="display:none;">
-            <td colspan="8" class="p-0">
-              <div class="record-panel" id="records-panel-${d.id}">
-                載入中...
-              </div>
-            </td>
-          </tr>
-        `).join('');
+            <td colspan="8" class="p-0"><div class="record-panel" id="records-panel-${d.id}">載入中...</div></td>
+          </tr>`).join('');
       }
-
       const total = result.totalElements || 0;
       document.getElementById('pageInfo').textContent = `共 ${total} 筆，第 ${currentPage + 1} / ${totalPages || 1} 頁`;
       document.getElementById('prevBtn').disabled = currentPage === 0;
       document.getElementById('nextBtn').disabled = currentPage >= totalPages - 1;
-
     } catch (e) { showTableError('無法連線到伺服器'); }
   }
 
-  function showTableError(msg) {
-    document.getElementById('deviceTableBody').innerHTML =
-      `<tr><td colspan="8" class="text-center py-4 text-danger">${msg}</td></tr>`;
-  }
-
+  function showTableError(msg) { document.getElementById('deviceTableBody').innerHTML = `<tr><td colspan="8" class="text-center py-4 text-danger">${msg}</td></tr>`; }
   function changePage(dir) { currentPage += dir; loadDevices(); }
 
-  // 展開 / 收合月發電紀錄
-  async function toggleRecords(deviceId, row) {
+  async function toggleRecords(deviceId) {
     const recordsRow = document.getElementById(`records-row-${deviceId}`);
     const icon = document.getElementById(`icon-${deviceId}`);
-
-    if (recordsRow.style.display !== 'none') {
-      recordsRow.style.display = 'none';
-      icon.classList.remove('open');
-      expandedDeviceId = null;
-      return;
-    }
-
-    // 收合其他展開的
+    if (recordsRow.style.display !== 'none') { recordsRow.style.display = 'none'; icon.classList.remove('open'); expandedDeviceId = null; return; }
     if (expandedDeviceId && expandedDeviceId !== deviceId) {
       document.getElementById(`records-row-${expandedDeviceId}`).style.display = 'none';
       const prevIcon = document.getElementById(`icon-${expandedDeviceId}`);
       if (prevIcon) prevIcon.classList.remove('open');
     }
-
     expandedDeviceId = deviceId;
     recordsRow.style.display = '';
     icon.classList.add('open');
-
     await loadRecords(deviceId);
   }
 
   async function loadRecords(deviceId) {
     const year = new Date().getFullYear();
     const panel = document.getElementById(`records-panel-${deviceId}`);
-
     try {
-      const res = await fetch(
-        `${API_BASE_URL}/api/v1/solar-devices/${deviceId}/monthly-records?year=${year}`,
-        { headers: authHeaders() }
-      );
+      const res = await fetch(`${API_BASE_URL}/api/v1/solar-devices/${deviceId}/monthly-records?year=${year}`, { headers: authHeaders() });
       const data = await res.json();
-
       if (!res.ok) { panel.innerHTML = `<div class="text-danger" style="font-size:0.85rem;">${data.message || '載入失敗'}</div>`; return; }
-
       const records = data.data || [];
-
+      const addBtn = role === 'EMPLOYEE' ? `<button class="btn btn-primary-green btn-sm" onclick="openCreateRecordModal(${deviceId})">+ 新增紀錄</button>` : '';
       panel.innerHTML = `
         <div class="d-flex align-items-center justify-content-between mb-3">
           <div class="record-panel-title">${year} 年月發電紀錄</div>
-          <button class="btn btn-primary-green btn-sm" onclick="openCreateRecordModal(${deviceId})">+ 新增紀錄</button>
+          ${addBtn}
         </div>
         ${records.length === 0
           ? `<div class="text-secondary" style="font-size:0.875rem;">本年度尚無發電紀錄</div>`
-          : `<div class="table-responsive">
-              <table class="table record-table mb-0">
-                <thead>
+          : `<div class="table-responsive"><table class="table record-table mb-0">
+              <thead><tr><th>月份</th><th>實際發電量 (kWh)</th><th>理論發電量 (kWh)</th><th>資料來源</th><th>建立時間</th><th>操作</th></tr></thead>
+              <tbody>
+                ${records.map(r => `
                   <tr>
-                    <th>月份</th>
-                    <th>實際發電量 (kWh)</th>
-                    <th>理論發電量 (kWh)</th>
-                    <th>資料來源</th>
-                    <th>建立時間</th>
-                    <th>操作</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  ${records.map(r => `
-                    <tr>
-                      <td><strong>${r.recordMonth} 月</strong></td>
-                      <td>${Number(r.actualKwh).toLocaleString()}</td>
-                      <td>${r.theoreticalKwh ? Number(r.theoreticalKwh).toLocaleString() : '-'}</td>
-                      <td><span class="badge bg-light text-dark border">${r.source || '-'}</span></td>
-                      <td style="font-size:0.8rem; color:#7a8f7a;">${r.createdAt ? r.createdAt.substring(0,10) : '-'}</td>
-                      <td>
-                        <button class="btn btn-outline-secondary btn-sm btn-sm-action"
-                          onclick="openEditRecordModal(${deviceId}, ${r.id}, ${r.actualKwh}, '${r.source}')">修改</button>
-                      </td>
-                    </tr>
-                  `).join('')}
-                </tbody>
-              </table>
-            </div>`
-        }
-      `;
-    } catch (e) {
-      panel.innerHTML = `<div class="text-danger" style="font-size:0.85rem;">無法連線到伺服器</div>`;
-    }
+                    <td><strong>${r.recordMonth} 月</strong></td>
+                    <td>${Number(r.actualKwh).toLocaleString()}</td>
+                    <td>${r.theoreticalKwh ? Number(r.theoreticalKwh).toLocaleString() : '-'}</td>
+                    <td><span class="badge bg-light text-dark border">${r.source || '-'}</span></td>
+                    <td style="font-size:0.8rem; color:#7a8f7a;">${r.createdAt ? r.createdAt.substring(0,10) : '-'}</td>
+                    <td>${role === 'EMPLOYEE' ? `<button class="btn btn-outline-secondary btn-sm btn-sm-action" onclick="openEditRecordModal(${deviceId}, ${r.id}, ${r.actualKwh}, '${r.source}')">修改</button>` : '—'}</td>
+                  </tr>`).join('')}
+              </tbody>
+            </table></div>`
+        }`;
+    } catch (e) { panel.innerHTML = `<div class="text-danger" style="font-size:0.85rem;">無法連線到伺服器</div>`; }
   }
 
-  // 新增設備
   function openCreateDeviceModal() {
-    ['cd_deviceName','cd_capacityKw','cd_installDate','cd_location'].forEach(id => {
-      document.getElementById(id).value = '';
-    });
+    ['cd_deviceName','cd_capacityKw','cd_installDate','cd_location'].forEach(id => document.getElementById(id).value = '');
     document.getElementById('createDeviceError').classList.add('d-none');
     new bootstrap.Modal(document.getElementById('createDeviceModal')).show();
   }
-
   async function submitCreateDevice() {
-    const body = {
-      deviceName: document.getElementById('cd_deviceName').value.trim(),
-      capacityKw: document.getElementById('cd_capacityKw').value,
-      installDate: document.getElementById('cd_installDate').value,
-      location: document.getElementById('cd_location').value.trim()
-    };
-    const errEl = document.getElementById('createDeviceError');
-    errEl.classList.add('d-none');
+    const body = { deviceName: document.getElementById('cd_deviceName').value.trim(), capacityKw: document.getElementById('cd_capacityKw').value, installDate: document.getElementById('cd_installDate').value, location: document.getElementById('cd_location').value.trim() };
+    const errEl = document.getElementById('createDeviceError'); errEl.classList.add('d-none');
     try {
-      const res = await fetch(`${API_BASE_URL}/api/v1/solar-devices`, {
-        method: 'POST', headers: authHeaders(), body: JSON.stringify(body)
-      });
+      const res = await fetch(`${API_BASE_URL}/api/v1/solar-devices`, { method: 'POST', headers: authHeaders(), body: JSON.stringify(body) });
       const data = await res.json();
       if (!res.ok) { errEl.textContent = data.message || '建立失敗'; errEl.classList.remove('d-none'); return; }
       bootstrap.Modal.getInstance(document.getElementById('createDeviceModal')).hide();
@@ -533,30 +301,24 @@
     } catch (e) { errEl.textContent = '無法連線到伺服器'; errEl.classList.remove('d-none'); }
   }
 
-  // 修改狀態
   function openStatusModal(id, status) {
     document.getElementById('s_id').value = id;
     document.getElementById('s_status').value = status;
     document.getElementById('statusError').classList.add('d-none');
     new bootstrap.Modal(document.getElementById('statusModal')).show();
   }
-
   async function submitStatus() {
     const id = document.getElementById('s_id').value;
     const body = { status: document.getElementById('s_status').value };
-    const errEl = document.getElementById('statusError');
-    errEl.classList.add('d-none');
+    const errEl = document.getElementById('statusError'); errEl.classList.add('d-none');
     try {
-      const res = await fetch(`${API_BASE_URL}/api/v1/solar-devices/${id}/status`, {
-        method: 'PATCH', headers: authHeaders(), body: JSON.stringify(body)
-      });
+      const res = await fetch(`${API_BASE_URL}/api/v1/solar-devices/${id}/status`, { method: 'PATCH', headers: authHeaders(), body: JSON.stringify(body) });
       if (!res.ok) { const d = await res.json(); errEl.textContent = d.message || '修改失敗'; errEl.classList.remove('d-none'); return; }
       bootstrap.Modal.getInstance(document.getElementById('statusModal')).hide();
       loadDevices();
     } catch (e) { errEl.textContent = '無法連線到伺服器'; errEl.classList.remove('d-none'); }
   }
 
-  // 新增月發電紀錄
   function openCreateRecordModal(deviceId) {
     document.getElementById('cr_deviceId').value = deviceId;
     document.getElementById('cr_year').value = new Date().getFullYear();
@@ -566,21 +328,12 @@
     document.getElementById('createRecordError').classList.add('d-none');
     new bootstrap.Modal(document.getElementById('createRecordModal')).show();
   }
-
   async function submitCreateRecord() {
     const deviceId = document.getElementById('cr_deviceId').value;
-    const body = {
-      recordYear: parseInt(document.getElementById('cr_year').value),
-      recordMonth: parseInt(document.getElementById('cr_month').value),
-      actualKwh: document.getElementById('cr_actualKwh').value,
-      source: document.getElementById('cr_source').value.trim()
-    };
-    const errEl = document.getElementById('createRecordError');
-    errEl.classList.add('d-none');
+    const body = { recordYear: parseInt(document.getElementById('cr_year').value), recordMonth: parseInt(document.getElementById('cr_month').value), actualKwh: document.getElementById('cr_actualKwh').value, source: document.getElementById('cr_source').value.trim() };
+    const errEl = document.getElementById('createRecordError'); errEl.classList.add('d-none');
     try {
-      const res = await fetch(`${API_BASE_URL}/api/v1/solar-devices/${deviceId}/monthly-records`, {
-        method: 'POST', headers: authHeaders(), body: JSON.stringify(body)
-      });
+      const res = await fetch(`${API_BASE_URL}/api/v1/solar-devices/${deviceId}/monthly-records`, { method: 'POST', headers: authHeaders(), body: JSON.stringify(body) });
       const data = await res.json();
       if (!res.ok) { errEl.textContent = data.message || '新增失敗'; errEl.classList.remove('d-none'); return; }
       bootstrap.Modal.getInstance(document.getElementById('createRecordModal')).hide();
@@ -588,7 +341,6 @@
     } catch (e) { errEl.textContent = '無法連線到伺服器'; errEl.classList.remove('d-none'); }
   }
 
-  // 修改月發電紀錄
   function openEditRecordModal(deviceId, recordId, actualKwh, source) {
     document.getElementById('er_deviceId').value = deviceId;
     document.getElementById('er_recordId').value = recordId;
@@ -597,20 +349,13 @@
     document.getElementById('editRecordError').classList.add('d-none');
     new bootstrap.Modal(document.getElementById('editRecordModal')).show();
   }
-
   async function submitEditRecord() {
     const deviceId = document.getElementById('er_deviceId').value;
     const recordId = document.getElementById('er_recordId').value;
-    const body = {
-      actualKwh: document.getElementById('er_actualKwh').value,
-      source: document.getElementById('er_source').value.trim()
-    };
-    const errEl = document.getElementById('editRecordError');
-    errEl.classList.add('d-none');
+    const body = { actualKwh: document.getElementById('er_actualKwh').value, source: document.getElementById('er_source').value.trim() };
+    const errEl = document.getElementById('editRecordError'); errEl.classList.add('d-none');
     try {
-      const res = await fetch(`${API_BASE_URL}/api/v1/solar-devices/${deviceId}/monthly-records/${recordId}`, {
-        method: 'PUT', headers: authHeaders(), body: JSON.stringify(body)
-      });
+      const res = await fetch(`${API_BASE_URL}/api/v1/solar-devices/${deviceId}/monthly-records/${recordId}`, { method: 'PUT', headers: authHeaders(), body: JSON.stringify(body) });
       const data = await res.json();
       if (!res.ok) { errEl.textContent = data.message || '修改失敗'; errEl.classList.remove('d-none'); return; }
       bootstrap.Modal.getInstance(document.getElementById('editRecordModal')).hide();
