@@ -200,7 +200,16 @@
   const API_BASE_URL = 'https://green-energy-platform-production.up.railway.app';
 
   if (localStorage.getItem('token')) {
-    window.location.href = 'dashboard.html';
+    const role = data.data.role;
+    localStorage.setItem('role', role);
+
+    if (role === 'ADMIN') {
+        window.location.href = 'users.html';
+    } else if (role === 'MANAGER') {
+        window.location.href = 'targets.html';
+    } else {
+        window.location.href = 'solar-devices.html';
+    }   
   }
 
   function quickLogin(username, password) {
