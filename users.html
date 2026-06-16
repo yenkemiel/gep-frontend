@@ -10,10 +10,10 @@
     .sidebar { width: 220px; min-height: 100vh; background: #2B4336; flex-shrink: 0; display: flex; flex-direction: column; }
     .sidebar-brand { padding: 1.5rem 1.25rem 1rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.4); border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 0.5rem; }
     .sidebar-brand strong { display: block; font-size: 1rem; color: #fff; letter-spacing: -0.01em; margin-bottom: 0.2rem; }
-    .nav-link-item { display: block; padding: 0.65rem 1.25rem; font-size: 0.9rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: all 0.15s; }
+    .nav-link-item { display: block; padding: 0.65rem 1.25rem; font-size: 0.875rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: all 0.15s; }
     .nav-link-item:hover { color: #fff; background: rgba(255,255,255,0.07); }
     .nav-link-item.active { color: #fff; background: rgba(255,255,255,0.12); font-weight: 600; }
-    .nav-section-label { padding: 1rem 1.25rem 0.35rem; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+    .nav-section-label { padding: 1rem 1.25rem 0.35rem; font-size: 0.688rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
     .topbar { height: 56px; background: #fff; border-bottom: 1px solid #e8ede8; display: flex; align-items: center; justify-content: space-between; padding: 0 1.75rem; flex-shrink: 0; }
     .topbar-title { font-size: 1rem; font-weight: 600; color: #1a2e24; }
     .role-badge { font-size: 0.75rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 4px; background: #eef3ec; color: #2B4336; letter-spacing: 0.04em; }
@@ -24,19 +24,34 @@
     .content-card { background: #fff; border-radius: 8px; border: 1px solid #e8ede8; margin: 1.25rem 1.75rem; }
     .content-card-header { padding: 1.1rem 1.5rem; border-bottom: 1px solid #e8ede8; display: flex; align-items: center; justify-content: space-between; }
     .content-card-header h6 { font-size: 0.9rem; font-weight: 600; color: #1a2e24; margin: 0; }
-    .table th { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #7a8f7a; border-bottom: 1px solid #e8ede8; padding: 0.85rem 1rem; background: #fafbfa; }
-    .table td { font-size: 0.9rem; color: #2d3e2d; padding: 0.85rem 1rem; vertical-align: middle; border-bottom: 1px solid #f0f4f0; }
+    .table th { font-size: 0.8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #7a8f7a; border-bottom: 1px solid #e8ede8; padding: 0.85rem 1rem; background: #fafbfa; }
+    .table td { font-size: 0.875rem; color: #2d3e2d; padding: 0.85rem 1rem; vertical-align: middle; border-bottom: 1px solid #f0f4f0; }
     .table tbody tr:hover { background: #fafbfa; }
     .table tbody tr:last-child td { border-bottom: none; }
+    /* 角色 badge */
+    .role-tag { display: inline-block; font-size: 0.8125rem; font-weight: 600; padding: 0.25em 0.6em; border-radius: 4px; }
+    .role-admin { background: #f8d7da; color: #721c24; }
+    .role-manager { background: #fff3cd; color: #856404; }
+    .role-employee { background: #d4edda; color: #155724; }
+    /* 狀態 badge */
+    .status-badge { display: inline-block; font-size: 0.8125rem; font-weight: 600; padding: 0.25em 0.6em; border-radius: 4px; }
+    .status-active { background: #d4edda; color: #155724; }
+    .status-inactive { background: #e2e3e5; color: #383d41; }
+    /* 按鈕 */
     .btn-primary-green { background: #2B4336; border: none; color: #fff; font-size: 0.875rem; font-weight: 600; padding: 0.5rem 1rem; border-radius: 6px; transition: background 0.15s; }
     .btn-primary-green:hover { background: #1a3028; color: #fff; }
-    .btn-sm-action { font-size: 0.78rem; padding: 0.3rem 0.65rem; border-radius: 4px; }
+    .btn-sm-action { font-size: 0.8125rem; padding: 0.3rem 0.65rem; border-radius: 4px; }
+    /* Modal */
     .modal-header { border-bottom: 1px solid #e8ede8; padding: 1.1rem 1.5rem; }
     .modal-title { font-size: 1rem; font-weight: 600; color: #1a2e24; }
     .modal-footer { border-top: 1px solid #e8ede8; padding: 0.9rem 1.5rem; }
     .form-label { font-size: 0.8rem; font-weight: 600; color: #445c41; text-transform: uppercase; letter-spacing: 0.04em; }
-    .form-control, .form-select { font-size: 0.9rem; border: 1.5px solid #d6dcd0; border-radius: 6px; }
+    .form-control, .form-select { font-size: 0.875rem; border: 1.5px solid #d6dcd0; border-radius: 6px; }
     .form-control:focus, .form-select:focus { border-color: #2B4336; box-shadow: 0 0 0 3px rgba(43,67,54,0.1); }
+    /* 分頁 */
+    .pagination { font-size: 0.875rem; }
+    .page-link { color: #2B4336; }
+    .page-item.active .page-link { background: #2B4336; border-color: #2B4336; color: #fff; }
   </style>
 </head>
 <body>
@@ -74,16 +89,23 @@
         </div>
         <div class="table-responsive">
           <table class="table mb-0">
-            <thead><tr><th>ID</th><th>帳號</th><th>顯示名稱</th><th>角色</th><th>狀態</th><th>操作</th></tr></thead>
-            <tbody id="userTableBody"><tr><td colspan="6" class="text-center py-4 text-secondary">載入中...</td></tr></tbody>
+            <thead>
+              <tr>
+                <th>帳號</th>
+                <th>顯示名稱</th>
+                <th>角色</th>
+                <th>狀態</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="userTableBody">
+              <tr><td colspan="5" class="text-center py-4 text-secondary">載入中...</td></tr>
+            </tbody>
           </table>
         </div>
         <div class="d-flex align-items-center justify-content-between px-3 py-2 border-top" style="border-color:#e8ede8 !important;">
           <span class="text-secondary" style="font-size:0.8rem;" id="pageInfo"></span>
-          <div class="d-flex gap-1">
-            <button class="btn btn-sm btn-outline-secondary" id="prevBtn" onclick="changePage(-1)">上一頁</button>
-            <button class="btn btn-sm btn-outline-secondary" id="nextBtn" onclick="changePage(1)">下一頁</button>
-          </div>
+          <nav><ul class="pagination pagination-sm mb-0" id="pagination"></ul></nav>
         </div>
       </div>
     </div>
@@ -95,10 +117,26 @@
   <div class="modal-dialog"><div class="modal-content">
     <div class="modal-header"><h5 class="modal-title">新增帳號</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
     <div class="modal-body">
-      <div class="mb-3"><label class="form-label">帳號</label><input type="text" class="form-control" id="create_username" placeholder="輸入帳號"></div>
-      <div class="mb-3"><label class="form-label">顯示名稱</label><input type="text" class="form-control" id="create_displayName" placeholder="輸入顯示名稱"></div>
-      <div class="mb-3"><label class="form-label">角色</label><select class="form-select" id="create_role"><option value="ADMIN">ADMIN</option><option value="MANAGER">MANAGER</option><option value="EMPLOYEE" selected>EMPLOYEE</option></select></div>
-      <div class="mb-3"><label class="form-label">密碼</label><input type="password" class="form-control" id="create_password" placeholder="輸入密碼"></div>
+      <div class="mb-3">
+        <label class="form-label">帳號</label>
+        <input type="text" class="form-control" id="create_username" placeholder="僅限英文字母與數字" pattern="[a-zA-Z0-9]+" title="帳號只能包含英文字母與數字">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">顯示名稱</label>
+        <input type="text" class="form-control" id="create_displayName" placeholder="輸入顯示名稱">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">角色</label>
+        <select class="form-select" id="create_role">
+          <option value="ADMIN">ADMIN</option>
+          <option value="MANAGER">MANAGER</option>
+          <option value="EMPLOYEE" selected>EMPLOYEE</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">密碼</label>
+        <input type="password" class="form-control" id="create_password" placeholder="英文、數字、特殊符號（!@#$%^&*）" pattern="[a-zA-Z0-9!@#$%^&*]+" title="密碼只能包含英文字母、數字與特殊符號">
+      </div>
       <div id="createError" class="alert alert-danger d-none py-2" style="font-size:0.85rem;"></div>
     </div>
     <div class="modal-footer"><button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">取消</button><button class="btn btn-primary-green btn-sm" onclick="submitCreate()">建立</button></div>
@@ -112,7 +150,13 @@
     <div class="modal-body">
       <input type="hidden" id="edit_id">
       <div class="mb-3"><label class="form-label">顯示名稱</label><input type="text" class="form-control" id="edit_displayName"></div>
-      <div class="mb-3"><label class="form-label">角色</label><select class="form-select" id="edit_role"><option value="ADMIN">ADMIN</option><option value="MANAGER">MANAGER</option><option value="EMPLOYEE">EMPLOYEE</option></select></div>
+      <div class="mb-3"><label class="form-label">角色</label>
+        <select class="form-select" id="edit_role">
+          <option value="ADMIN">ADMIN</option>
+          <option value="MANAGER">MANAGER</option>
+          <option value="EMPLOYEE">EMPLOYEE</option>
+        </select>
+      </div>
       <div id="editError" class="alert alert-danger d-none py-2" style="font-size:0.85rem;"></div>
     </div>
     <div class="modal-footer"><button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">取消</button><button class="btn btn-primary-green btn-sm" onclick="submitEdit()">儲存</button></div>
@@ -125,7 +169,10 @@
     <div class="modal-header"><h5 class="modal-title">重設密碼</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
     <div class="modal-body">
       <input type="hidden" id="pw_id">
-      <div class="mb-3"><label class="form-label">新密碼</label><input type="password" class="form-control" id="pw_newPassword" placeholder="輸入新密碼"></div>
+      <div class="mb-3">
+        <label class="form-label">新密碼</label>
+        <input type="password" class="form-control" id="pw_newPassword" placeholder="英文、數字、特殊符號（!@#$%^&*）" pattern="[a-zA-Z0-9!@#$%^&*]+" title="密碼只能包含英文字母、數字與特殊符號">
+      </div>
       <div id="pwError" class="alert alert-danger d-none py-2" style="font-size:0.85rem;"></div>
     </div>
     <div class="modal-footer"><button class="btn btn-outline-secondary btn-sm" data-bs-dismiss="modal">取消</button><button class="btn btn-primary-green btn-sm" onclick="submitPassword()">重設</button></div>
@@ -145,7 +192,6 @@
   document.getElementById('usernameDisplay').textContent = localStorage.getItem('username') || '';
   document.getElementById('roleDisplay').textContent = role;
 
-  // Sidebar：ADMIN 只看使用者管理
   document.getElementById('sidebarNav').innerHTML = `
     <div class="nav-section-label">系統管理</div>
     <a href="users.html" class="nav-link-item active">使用者管理</a>
@@ -153,13 +199,15 @@
 
   function authHeaders() { return { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' }; }
   function doLogout() { localStorage.clear(); window.location.href = 'login.html'; }
-
+  
   function roleBadge(r) {
-    const map = { ADMIN: 'danger', MANAGER: 'warning', EMPLOYEE: 'success' };
-    return `<span class="badge bg-${map[r] || 'secondary'}">${r}</span>`;
+      return `<strong>${r}</strong>`;
   }
+  
   function statusBadge(isActive) {
-    return isActive ? `<span class="badge bg-success">啟用</span>` : `<span class="badge bg-secondary">停用</span>`;
+    return isActive
+      ? `<span class="status-badge status-active">啟用</span>`
+      : `<span class="status-badge status-inactive">停用</span>`;
   }
 
   async function loadUsers() {
@@ -175,11 +223,10 @@
       totalPages = result.totalPages || 0;
       const tbody = document.getElementById('userTableBody');
       if (users.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="6" class="text-center py-4 text-secondary">目前沒有使用者資料</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="5" class="text-center py-4 text-secondary">目前沒有使用者資料</td></tr>`;
       } else {
         tbody.innerHTML = users.map(u => `
           <tr>
-            <td class="text-secondary">#${u.id}</td>
             <td><strong>${u.username}</strong></td>
             <td>${u.displayName || '-'}</td>
             <td>${roleBadge(u.role)}</td>
@@ -187,7 +234,7 @@
             <td>
               <div class="d-flex gap-1 flex-wrap">
                 <button class="btn btn-outline-secondary btn-sm btn-sm-action" onclick="openEditModal(${u.id}, '${u.displayName}', '${u.role}')">修改</button>
-                <button class="btn btn-sm btn-sm-action ${u.isActive ? 'btn-outline-warning' : 'btn-outline-success'}" onclick="toggleStatus(${u.id}, ${u.isActive})">${u.isActive ? '停用' : '啟用'}</button>
+                <button class="btn btn-sm btn-sm-action ${u.isActive ? 'btn-outline-danger' : 'btn-outline-success'}" onclick="toggleStatus(${u.id}, ${u.isActive})">${u.isActive ? '停用' : '啟用'}</button>
                 <button class="btn btn-outline-secondary btn-sm btn-sm-action" onclick="openPasswordModal(${u.id})">重設密碼</button>
               </div>
             </td>
@@ -195,13 +242,36 @@
       }
       const total = result.totalElements || 0;
       document.getElementById('pageInfo').textContent = `共 ${total} 筆，第 ${currentPage + 1} / ${totalPages || 1} 頁`;
-      document.getElementById('prevBtn').disabled = currentPage === 0;
-      document.getElementById('nextBtn').disabled = currentPage >= totalPages - 1;
+      renderPagination();
     } catch (e) { showTableError('無法連線到伺服器'); }
   }
 
-  function showTableError(msg) { document.getElementById('userTableBody').innerHTML = `<tr><td colspan="6" class="text-center py-4 text-danger">${msg}</td></tr>`; }
-  function changePage(dir) { currentPage += dir; loadUsers(); }
+  function showTableError(msg) {
+    document.getElementById('userTableBody').innerHTML = `<tr><td colspan="5" class="text-center py-4 text-danger">${msg}</td></tr>`;
+  }
+
+  // ── 數字分頁 ──
+  function renderPagination() {
+    const ul = document.getElementById('pagination');
+    ul.innerHTML = '';
+    if (totalPages <= 1) return;
+    const addItem = (label, page, disabled, active) => {
+      const li = document.createElement('li');
+      li.className = `page-item${disabled ? ' disabled' : ''}${active ? ' active' : ''}`;
+      li.innerHTML = `<button class="page-link" ${disabled ? 'tabindex="-1"' : `onclick="goPage(${page})"`}>${label}</button>`;
+      ul.appendChild(li);
+    };
+    addItem('«', currentPage - 1, currentPage === 0, false);
+    let start = Math.max(0, currentPage - 2);
+    let end = Math.min(totalPages - 1, start + 4);
+    if (end - start < 4) start = Math.max(0, end - 4);
+    if (start > 0) { addItem('1', 0, false, false); if (start > 1) addItem('...', null, true, false); }
+    for (let i = start; i <= end; i++) addItem(i + 1, i, false, i === currentPage);
+    if (end < totalPages - 1) { if (end < totalPages - 2) addItem('...', null, true, false); addItem(totalPages, totalPages - 1, false, false); }
+    addItem('»', currentPage + 1, currentPage >= totalPages - 1, false);
+  }
+
+  function goPage(page) { currentPage = page; loadUsers(); }
 
   function openCreateModal() {
     ['create_username','create_displayName','create_password'].forEach(id => document.getElementById(id).value = '');
@@ -210,7 +280,12 @@
     new bootstrap.Modal(document.getElementById('createModal')).show();
   }
   async function submitCreate() {
-    const body = { username: document.getElementById('create_username').value.trim(), displayName: document.getElementById('create_displayName').value.trim(), role: document.getElementById('create_role').value, password: document.getElementById('create_password').value.trim() };
+    const body = {
+      username: document.getElementById('create_username').value.trim(),
+      displayName: document.getElementById('create_displayName').value.trim(),
+      role: document.getElementById('create_role').value,
+      password: document.getElementById('create_password').value.trim()
+    };
     const errEl = document.getElementById('createError'); errEl.classList.add('d-none');
     try {
       const res = await fetch(`${API_BASE_URL}/api/v1/users`, { method: 'POST', headers: authHeaders(), body: JSON.stringify(body) });
@@ -230,7 +305,10 @@
   }
   async function submitEdit() {
     const id = document.getElementById('edit_id').value;
-    const body = { displayName: document.getElementById('edit_displayName').value.trim(), role: document.getElementById('edit_role').value };
+    const body = {
+      displayName: document.getElementById('edit_displayName').value.trim(),
+      role: document.getElementById('edit_role').value
+    };
     const errEl = document.getElementById('editError'); errEl.classList.add('d-none');
     try {
       const res = await fetch(`${API_BASE_URL}/api/v1/users/${id}`, { method: 'PUT', headers: authHeaders(), body: JSON.stringify(body) });
@@ -243,7 +321,9 @@
 
   async function toggleStatus(id, currentStatus) {
     try {
-      const res = await fetch(`${API_BASE_URL}/api/v1/users/${id}/status`, { method: 'PATCH', headers: authHeaders(), body: JSON.stringify({ isActive: !currentStatus }) });
+      const res = await fetch(`${API_BASE_URL}/api/v1/users/${id}/status`, {
+        method: 'PATCH', headers: authHeaders(), body: JSON.stringify({ isActive: !currentStatus })
+      });
       if (!res.ok) { alert('操作失敗'); return; }
       loadUsers();
     } catch (e) { alert('無法連線到伺服器'); }
