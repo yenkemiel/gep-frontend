@@ -10,10 +10,10 @@
     .sidebar { width: 220px; min-height: 100vh; background: #2B4336; flex-shrink: 0; display: flex; flex-direction: column; }
     .sidebar-brand { padding: 1.5rem 1.25rem 1rem; font-size: 0.75rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.4); border-bottom: 1px solid rgba(255,255,255,0.08); margin-bottom: 0.5rem; }
     .sidebar-brand strong { display: block; font-size: 1rem; color: #fff; letter-spacing: -0.01em; margin-bottom: 0.2rem; }
-    .nav-link-item { display: block; padding: 0.65rem 1.25rem; font-size: 0.9rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: all 0.15s; }
+    .nav-link-item { display: block; padding: 0.65rem 1.25rem; font-size: 0.875rem; color: rgba(255,255,255,0.6); text-decoration: none; transition: all 0.15s; }
     .nav-link-item:hover { color: #fff; background: rgba(255,255,255,0.07); }
     .nav-link-item.active { color: #fff; background: rgba(255,255,255,0.12); font-weight: 600; }
-    .nav-section-label { padding: 1rem 1.25rem 0.35rem; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
+    .nav-section-label { padding: 1rem 1.25rem 0.35rem; font-size: 0.688rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3); }
     .topbar { height: 56px; background: #fff; border-bottom: 1px solid #e8ede8; display: flex; align-items: center; justify-content: space-between; padding: 0 1.75rem; flex-shrink: 0; }
     .topbar-title { font-size: 1rem; font-weight: 600; color: #1a2e24; }
     .role-badge { font-size: 0.75rem; font-weight: 600; padding: 0.3rem 0.75rem; border-radius: 4px; background: #eef3ec; color: #2B4336; letter-spacing: 0.04em; }
@@ -24,21 +24,33 @@
     .content-card { background: #fff; border-radius: 8px; border: 1px solid #e8ede8; margin: 1.25rem 1.75rem; }
     .content-card-header { padding: 1.1rem 1.5rem; border-bottom: 1px solid #e8ede8; display: flex; align-items: center; justify-content: space-between; }
     .content-card-header h6 { font-size: 0.9rem; font-weight: 600; color: #1a2e24; margin: 0; }
-    .table th { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #7a8f7a; border-bottom: 1px solid #e8ede8; padding: 0.85rem 1rem; background: #fafbfa; }
-    .table td { font-size: 0.9rem; color: #2d3e2d; padding: 0.85rem 1rem; vertical-align: middle; border-bottom: 1px solid #f0f4f0; }
+    .table th { font-size: 0.8125rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #7a8f7a; border-bottom: 1px solid #e8ede8; padding: 0.85rem 1rem; background: #fafbfa; }
+    .table td { font-size: 0.875rem; color: #2d3e2d; padding: 0.85rem 1rem; vertical-align: middle; border-bottom: 1px solid #f0f4f0; }
     .table tbody tr:hover { background: #fafbfa; cursor: pointer; }
     .table tbody tr:last-child td { border-bottom: none; }
+    /* 狀態 badge */
+    .status-badge { display: inline-block; font-size: 0.8125rem; font-weight: 600; padding: 0.25em 0.6em; border-radius: 4px; }
+    .status-active { background: #d4edda; color: #155724; }
+    .status-terminated { background: #f8d7da; color: #721c24; }
+    .status-expired { background: #e2e3e5; color: #383d41; }
+    /* 按鈕 */
     .btn-primary-green { background: #2B4336; border: none; color: #fff; font-size: 0.875rem; font-weight: 600; padding: 0.5rem 1rem; border-radius: 6px; transition: background 0.15s; }
     .btn-primary-green:hover { background: #1a3028; color: #fff; }
-    .btn-sm-action { font-size: 0.78rem; padding: 0.3rem 0.65rem; border-radius: 4px; }
+    .btn-sm-action { font-size: 0.8125rem; padding: 0.3rem 0.65rem; border-radius: 4px; }
+    /* Modal */
     .modal-header { border-bottom: 1px solid #e8ede8; padding: 1.1rem 1.5rem; }
     .modal-title { font-size: 1rem; font-weight: 600; color: #1a2e24; }
     .modal-footer { border-top: 1px solid #e8ede8; padding: 0.9rem 1.5rem; }
     .form-label { font-size: 0.8rem; font-weight: 600; color: #445c41; text-transform: uppercase; letter-spacing: 0.04em; }
-    .form-control, .form-select { font-size: 0.9rem; border: 1.5px solid #d6dcd0; border-radius: 6px; }
+    .form-control, .form-select { font-size: 0.875rem; border: 1.5px solid #d6dcd0; border-radius: 6px; }
     .form-control:focus, .form-select:focus { border-color: #2B4336; box-shadow: 0 0 0 3px rgba(43,67,54,0.1); }
-    .detail-label { font-size: 0.78rem; color: #7a8f7a; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
-    .detail-value { font-size: 0.95rem; color: #1a2e24; margin-top: 0.2rem; }
+    /* 詳情 Modal */
+    .detail-label { font-size: 0.8125rem; color: #7a8f7a; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+    .detail-value { font-size: 1rem; color: #1a2e24; margin-top: 0.25rem; }
+    /* 分頁 */
+    .pagination { font-size: 0.875rem; }
+    .page-link { color: #2B4336; }
+    .page-item.active .page-link { background: #2B4336; border-color: #2B4336; color: #fff; }
   </style>
 </head>
 <body>
@@ -74,24 +86,31 @@
             <select class="form-select form-select-sm" id="typeFilter" style="width:130px;" onchange="loadContracts()">
               <option value="">全部類型</option>
               <option value="CPPA">CPPA</option>
-              <option value="UTILITY">售電業</option>
+              <option value="RETAIL">售電業</option>
             </select>
-            <!-- 新增按鈕只有 EMPLOYEE 看得到 -->
             <button class="btn btn-primary-green btn-sm d-none" id="btnCreate" onclick="openCreateModal()">+ 新增合約</button>
           </div>
         </div>
         <div class="table-responsive">
           <table class="table mb-0">
-            <thead><tr><th>ID</th><th>供應商</th><th>合約類型</th><th>月供電量 (kWh)</th><th>起訖日期</th><th>狀態</th><th>操作</th></tr></thead>
-            <tbody id="contractTableBody"><tr><td colspan="7" class="text-center py-4 text-secondary">載入中...</td></tr></tbody>
+            <thead>
+              <tr>
+                <th>供應商</th>
+                <th>合約類型</th>
+                <th>月供電量 (kWh)</th>
+                <th>起訖日期</th>
+                <th>狀態</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody id="contractTableBody">
+              <tr><td colspan="6" class="text-center py-4 text-secondary">載入中...</td></tr>
+            </tbody>
           </table>
         </div>
         <div class="d-flex align-items-center justify-content-between px-3 py-2 border-top" style="border-color:#e8ede8 !important;">
           <span class="text-secondary" style="font-size:0.8rem;" id="pageInfo"></span>
-          <div class="d-flex gap-1">
-            <button class="btn btn-sm btn-outline-secondary" id="prevBtn" onclick="changePage(-1)">上一頁</button>
-            <button class="btn btn-sm btn-outline-secondary" id="nextBtn" onclick="changePage(1)">下一頁</button>
-          </div>
+          <nav><ul class="pagination pagination-sm mb-0" id="pagination"></ul></nav>
         </div>
       </div>
     </div>
@@ -103,7 +122,7 @@
   <div class="modal-dialog modal-lg"><div class="modal-content">
     <div class="modal-header"><h5 class="modal-title">合約詳情</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
     <div class="modal-body">
-      <div class="row g-3">
+      <div class="row g-4">
         <div class="col-6"><div class="detail-label">供應商</div><div class="detail-value" id="d_supplierName"></div></div>
         <div class="col-6"><div class="detail-label">合約類型</div><div class="detail-value" id="d_contractType"></div></div>
         <div class="col-6"><div class="detail-label">月供電量 (kWh)</div><div class="detail-value" id="d_monthlySupplyKwh"></div></div>
@@ -128,9 +147,9 @@
     <div class="modal-body">
       <div class="row g-3">
         <div class="col-6"><label class="form-label">供應商名稱</label><input type="text" class="form-control" id="c_supplierName" placeholder="輸入供應商名稱"></div>
-        <div class="col-6"><label class="form-label">合約類型</label><select class="form-select" id="c_contractType"><option value="CPPA">CPPA</option><option value="UTILITY">售電業</option></select></div>
-        <div class="col-6"><label class="form-label">月供電量 (kWh)</label><input type="number" class="form-control" id="c_monthlySupplyKwh" placeholder="0.00"></div>
-        <div class="col-6"><label class="form-label">每度電費率</label><input type="number" class="form-control" id="c_ratePerKwh" placeholder="0.00"></div>
+        <div class="col-6"><label class="form-label">合約類型</label><select class="form-select" id="c_contractType"><option value="CPPA">CPPA</option><option value="RETAIL">售電業</option></select></div>
+        <div class="col-6"><label class="form-label">月供電量 (kWh)</label><input type="number" class="form-control" id="c_monthlySupplyKwh" placeholder="0.00" min="0.01" step="0.01"></div>
+        <div class="col-6"><label class="form-label">每度電費率</label><input type="number" class="form-control" id="c_ratePerKwh" placeholder="0.00" min="0.01" step="0.01"></div>
         <div class="col-6"><label class="form-label">起始日期</label><input type="date" class="form-control" id="c_startDate"></div>
         <div class="col-6"><label class="form-label">結束日期</label><input type="date" class="form-control" id="c_endDate"></div>
         <div class="col-12"><label class="form-label">備註</label><textarea class="form-control" id="c_notes" rows="2" placeholder="選填"></textarea></div>
@@ -149,9 +168,9 @@
       <input type="hidden" id="e_id">
       <div class="row g-3">
         <div class="col-6"><label class="form-label">供應商名稱</label><input type="text" class="form-control" id="e_supplierName"></div>
-        <div class="col-6"><label class="form-label">合約類型</label><select class="form-select" id="e_contractType"><option value="CPPA">CPPA</option><option value="UTILITY">售電業</option></select></div>
-        <div class="col-6"><label class="form-label">月供電量 (kWh)</label><input type="number" class="form-control" id="e_monthlySupplyKwh"></div>
-        <div class="col-6"><label class="form-label">每度電費率</label><input type="number" class="form-control" id="e_ratePerKwh"></div>
+        <div class="col-6"><label class="form-label">合約類型</label><select class="form-select" id="e_contractType"><option value="CPPA">CPPA</option><option value="RETAIL">售電業</option></select></div>
+        <div class="col-6"><label class="form-label">月供電量 (kWh)</label><input type="number" class="form-control" id="e_monthlySupplyKwh" min="0.01" step="0.01"></div>
+        <div class="col-6"><label class="form-label">每度電費率（不可修改）</label><input type="number" class="form-control" id="e_ratePerKwh" disabled></div>
         <div class="col-6"><label class="form-label">起始日期</label><input type="date" class="form-control" id="e_startDate"></div>
         <div class="col-6"><label class="form-label">結束日期</label><input type="date" class="form-control" id="e_endDate"></div>
         <div class="col-12"><label class="form-label">備註</label><textarea class="form-control" id="e_notes" rows="2"></textarea></div>
@@ -168,7 +187,7 @@
     <div class="modal-header"><h5 class="modal-title">終止合約</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
     <div class="modal-body">
       <input type="hidden" id="t_id">
-      <p class="text-secondary mb-3" style="font-size:0.9rem;">此操作將終止合約，無法復原。</p>
+      <p class="text-secondary mb-3" style="font-size:0.875rem;">此操作將終止合約，無法復原。</p>
       <div class="mb-3"><label class="form-label">終止原因</label><textarea class="form-control" id="t_reason" rows="3" placeholder="請輸入終止原因"></textarea></div>
       <div class="alert alert-danger d-none py-2" id="terminateError" style="font-size:0.85rem;"></div>
     </div>
@@ -189,7 +208,6 @@
   document.getElementById('usernameDisplay').textContent = localStorage.getItem('username') || '';
   document.getElementById('roleDisplay').textContent = role;
 
-  // Sidebar：MANAGER、EMPLOYEE 看業務管理
   document.getElementById('sidebarNav').innerHTML = `
     <div class="nav-section-label">業務管理</div>
     <a href="targets.html" class="nav-link-item">年度目標</a>
@@ -197,17 +215,17 @@
     <a href="contracts.html" class="nav-link-item active">合約管理</a>
   `;
 
-  // EMPLOYEE 才能新增、修改；MANAGER 才能終止
   if (role === 'EMPLOYEE') document.getElementById('btnCreate').classList.remove('d-none');
 
   function authHeaders() { return { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' }; }
   function doLogout() { localStorage.clear(); window.location.href = 'login.html'; }
 
   function statusBadge(status) {
-    const map = { ACTIVE: 'success', TERMINATED: 'danger', EXPIRED: 'secondary' };
-    return `<span class="badge bg-${map[status] || 'secondary'}">${status}</span>`;
+    const map = { ACTIVE: 'status-active', TERMINATED: 'status-terminated', EXPIRED: 'status-expired' };
+    return `<span class="status-badge ${map[status] || 'status-expired'}">${status}</span>`;
   }
 
+  // ── FR-020 載入合約清單 ──
   async function loadContracts() {
     const status = document.getElementById('statusFilter').value;
     const type = document.getElementById('typeFilter').value;
@@ -223,20 +241,19 @@
       totalPages = result.totalPages || 0;
       const tbody = document.getElementById('contractTableBody');
       if (contracts.length === 0) {
-        tbody.innerHTML = `<tr><td colspan="7" class="text-center py-4 text-secondary">目前沒有合約資料</td></tr>`;
+        tbody.innerHTML = `<tr><td colspan="6" class="text-center py-4 text-secondary">目前沒有合約資料</td></tr>`;
       } else {
         tbody.innerHTML = contracts.map(c => {
           let actions = '—';
           if (c.status === 'ACTIVE') {
-            const editBtn = role === 'EMPLOYEE' ? `<button class="btn btn-outline-secondary btn-sm btn-sm-action" onclick="openEditModal(${JSON.stringify(c).replace(/"/g, '&quot;')})">修改</button>` : '';
-            const terminateBtn = role === 'MANAGER' ? `<button class="btn btn-outline-danger btn-sm btn-sm-action" onclick="openTerminateModal(${c.id})">終止</button>` : '';
+            const editBtn = role === 'EMPLOYEE' ? `<button class="btn btn-outline-secondary btn-sm btn-sm-action" onclick="event.stopPropagation();openEditModal(${JSON.stringify(c).replace(/"/g, '&quot;')})">修改</button>` : '';
+            const terminateBtn = role === 'MANAGER' ? `<button class="btn btn-outline-danger btn-sm btn-sm-action" onclick="event.stopPropagation();openTerminateModal(${c.id})">終止</button>` : '';
             if (editBtn || terminateBtn) actions = `<div class="d-flex gap-1 flex-wrap">${editBtn}${terminateBtn}</div>`;
           }
           return `
             <tr onclick="openDetail(${c.id})" title="點擊查看詳情">
-              <td class="text-secondary">#${c.id}</td>
               <td><strong>${c.supplierName}</strong></td>
-              <td><span class="badge bg-light text-dark border">${c.contractType}</span></td>
+              <td>${c.contractType}</td>
               <td>${Number(c.monthlySupplyKwh).toLocaleString()}</td>
               <td style="font-size:0.82rem;">${c.startDate} ～ ${c.endDate}</td>
               <td>${statusBadge(c.status)}</td>
@@ -246,14 +263,38 @@
       }
       const total = result.totalElements || 0;
       document.getElementById('pageInfo').textContent = `共 ${total} 筆，第 ${currentPage + 1} / ${totalPages || 1} 頁`;
-      document.getElementById('prevBtn').disabled = currentPage === 0;
-      document.getElementById('nextBtn').disabled = currentPage >= totalPages - 1;
+      renderPagination();
     } catch (e) { showTableError('無法連線到伺服器'); }
   }
 
-  function showTableError(msg) { document.getElementById('contractTableBody').innerHTML = `<tr><td colspan="7" class="text-center py-4 text-danger">${msg}</td></tr>`; }
-  function changePage(dir) { currentPage += dir; loadContracts(); }
+  function showTableError(msg) {
+    document.getElementById('contractTableBody').innerHTML = `<tr><td colspan="6" class="text-center py-4 text-danger">${msg}</td></tr>`;
+  }
 
+  // ── 數字分頁 ──
+  function renderPagination() {
+    const ul = document.getElementById('pagination');
+    ul.innerHTML = '';
+    if (totalPages <= 1) return;
+    const addItem = (label, page, disabled, active) => {
+      const li = document.createElement('li');
+      li.className = `page-item${disabled ? ' disabled' : ''}${active ? ' active' : ''}`;
+      li.innerHTML = `<button class="page-link" ${disabled ? 'tabindex="-1"' : `onclick="goPage(${page})"`}>${label}</button>`;
+      ul.appendChild(li);
+    };
+    addItem('«', currentPage - 1, currentPage === 0, false);
+    let start = Math.max(0, currentPage - 2);
+    let end = Math.min(totalPages - 1, start + 4);
+    if (end - start < 4) start = Math.max(0, end - 4);
+    if (start > 0) { addItem('1', 0, false, false); if (start > 1) addItem('...', null, true, false); }
+    for (let i = start; i <= end; i++) addItem(i + 1, i, false, i === currentPage);
+    if (end < totalPages - 1) { if (end < totalPages - 2) addItem('...', null, true, false); addItem(totalPages, totalPages - 1, false, false); }
+    addItem('»', currentPage + 1, currentPage >= totalPages - 1, false);
+  }
+
+  function goPage(page) { currentPage = page; loadContracts(); }
+
+  // ── FR-022 詳情 ──
   async function openDetail(id) {
     try {
       const res = await fetch(`${API_BASE_URL}/api/v1/contracts/${id}`, { headers: authHeaders() });
@@ -275,6 +316,7 @@
     } catch (e) {}
   }
 
+  // ── FR-021 新增合約 ──
   function openCreateModal() {
     ['c_supplierName','c_monthlySupplyKwh','c_ratePerKwh','c_startDate','c_endDate','c_notes'].forEach(id => document.getElementById(id).value = '');
     document.getElementById('c_contractType').value = 'CPPA';
@@ -282,7 +324,15 @@
     new bootstrap.Modal(document.getElementById('createModal')).show();
   }
   async function submitCreate() {
-    const body = { supplierName: document.getElementById('c_supplierName').value.trim(), contractType: document.getElementById('c_contractType').value, monthlySupplyKwh: document.getElementById('c_monthlySupplyKwh').value, ratePerKwh: document.getElementById('c_ratePerKwh').value, startDate: document.getElementById('c_startDate').value, endDate: document.getElementById('c_endDate').value, notes: document.getElementById('c_notes').value.trim() };
+    const body = {
+      supplierName: document.getElementById('c_supplierName').value.trim(),
+      contractType: document.getElementById('c_contractType').value,
+      monthlySupplyKwh: document.getElementById('c_monthlySupplyKwh').value,
+      ratePerKwh: document.getElementById('c_ratePerKwh').value,
+      startDate: document.getElementById('c_startDate').value,
+      endDate: document.getElementById('c_endDate').value,
+      notes: document.getElementById('c_notes').value.trim()
+    };
     const errEl = document.getElementById('createError'); errEl.classList.add('d-none');
     try {
       const res = await fetch(`${API_BASE_URL}/api/v1/contracts`, { method: 'POST', headers: authHeaders(), body: JSON.stringify(body) });
@@ -293,6 +343,7 @@
     } catch (e) { errEl.textContent = '無法連線到伺服器'; errEl.classList.remove('d-none'); }
   }
 
+  // ── FR-023 修改合約 ──
   function openEditModal(c) {
     document.getElementById('e_id').value = c.id;
     document.getElementById('e_supplierName').value = c.supplierName;
@@ -307,7 +358,14 @@
   }
   async function submitEdit() {
     const id = document.getElementById('e_id').value;
-    const body = { supplierName: document.getElementById('e_supplierName').value.trim(), contractType: document.getElementById('e_contractType').value, monthlySupplyKwh: document.getElementById('e_monthlySupplyKwh').value, ratePerKwh: document.getElementById('e_ratePerKwh').value, startDate: document.getElementById('e_startDate').value, endDate: document.getElementById('e_endDate').value, notes: document.getElementById('e_notes').value.trim() };
+    const body = {
+      supplierName: document.getElementById('e_supplierName').value.trim(),
+      contractType: document.getElementById('e_contractType').value,
+      monthlySupplyKwh: document.getElementById('e_monthlySupplyKwh').value,
+      startDate: document.getElementById('e_startDate').value,
+      endDate: document.getElementById('e_endDate').value,
+      notes: document.getElementById('e_notes').value.trim()
+    };
     const errEl = document.getElementById('editError'); errEl.classList.add('d-none');
     try {
       const res = await fetch(`${API_BASE_URL}/api/v1/contracts/${id}`, { method: 'PUT', headers: authHeaders(), body: JSON.stringify(body) });
@@ -318,6 +376,7 @@
     } catch (e) { errEl.textContent = '無法連線到伺服器'; errEl.classList.remove('d-none'); }
   }
 
+  // ── FR-024 終止合約 ──
   function openTerminateModal(id) {
     document.getElementById('t_id').value = id;
     document.getElementById('t_reason').value = '';
